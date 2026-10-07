@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the DataLayer Monitor browser extension.">
+  <title>DataLayer Monitor — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 760px; margin: 0 auto; padding: 40px 24px; font: 17px/1.65 system-ui, sans-serif; }
+    h1, h2 { line-height: 1.25; }
+    h1 { font-size: 2rem; }
+    h2 { margin-top: 2rem; font-size: 1.3rem; }
+    a { color: #397bcb; overflow-wrap: anywhere; }
+    .date { opacity: .75; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>DataLayer Monitor Privacy Policy</h1>
+    <p class="date">Effective date: October 7, 2026</p>
+    <p>DataLayer Monitor is a browser extension developed by Khaled Saif to inspect and debug Google Tag Manager dataLayer events and outgoing Google Analytics 4 (GA4) measurement requests. Captured monitoring data is processed and stored locally in your browser. The extension does not send that captured data to the developer or a developer-operated server.</p>
+
+    <h2>Information the extension handles</h2>
+    <p>On supported websites where monitoring is allowed and enabled, the extension reads dataLayer entries and pushes, including custom dataLayers. It also observes matching analytics requests and decodes GA4 event parameters, user properties, ecommerce items, destinations, and available response statuses or errors.</p>
+    <p>Captured records may include page URLs, page titles, referrers, timestamps, event names, identifiers, and details of website interactions or purchases. The extension does not access Chrome's browsing-history database. Page information is used to associate captured events and requests with the pages and tabs where they occurred.</p>
+    <p>The contents depend on what the inspected website places in its dataLayer or analytics requests. If those payloads contain personal or sensitive information, that information may appear in the inspector and in saved or exported records. The extension does not automatically redact every sensitive field.</p>
+    <p>The extension also stores your preferences, such as theme, muted event names, custom dataLayer names, monitoring and persistence settings, and optional GTM injection configuration.</p>
+
+    <h2>Purpose and use</h2>
+    <p>This information is used to provide the extension's analytics debugging features: displaying, searching, filtering, retaining, saving, and exporting events and requests. The developer does not receive captured monitoring records, sell them, use them for advertising, or use them to determine creditworthiness or for lending purposes.</p>
+
+    <h2>Local storage and retention</h2>
+    <p>Live monitoring uses bounded in-memory buffers and browser session storage. GA4 records are limited to 100 hits per tab and are cleared when the tab closes, its origin changes, or you use the GA4 clear control. Session storage does not provide permanent retention across browser sessions.</p>
+    <p>Persist mode retains live event history across same-origin navigation. Navigation recovery may briefly store recent events and the previous page URL in the inspected website's sessionStorage. That recovery record is accessible to scripts on the same website and is removed when recovered or discarded by the recovery logic.</p>
+    <p>Saved events and snapshots remain in extension local storage until you delete them, clear saved records, they are displaced by storage limits, or you uninstall the extension. Preferences remain until changed or extension storage is removed. Current saved-record limits depend on the save operation and range from 100 to 200 records.</p>
+
+    <h2>Network requests and optional GTM Injection</h2>
+    <p>The analytics inspector observes requests sent by the website; observing them does not send a copy to the developer. All extension monitoring and interface code is bundled with the extension.</p>
+    <p>If you explicitly enable GTM Injection and provide a container ID, the extension loads Google's official gtm.js from https://www.googletagmanager.com into the inspected webpage on the next matching page load. Injection requires an exact match with the website origin saved in your settings. Optional GTM environment parameters may be included in that request.</p>
+    <p>The downloaded GTM script runs in the webpage context, without direct access to extension APIs. The selected container can execute its configured tags and send real analytics or other requests to Google and other destinations configured in that container. Those services' privacy practices apply to those requests. GTM Injection does not send captured monitoring records to a developer-operated server.</p>
+    <p>Hovering over an image URL in the inspector may load the image from its host to display a preview. Opening external links also contacts the destination website. Such requests can reveal your IP address and other standard request information to the destination.</p>
+
+    <h2>Your controls</h2>
+    <p>You can disable monitoring for a tab, turn persistence or GTM Injection off, clear live or GA4 records, and delete saved records using the extension's controls. You can also restrict website access through Chrome's extension settings. Uninstalling removes extension-managed storage; it does not remove files you previously exported or necessarily remove recovery data held in a website's sessionStorage.</p>
+    <p>Exports create files on your device at your request. You control whether those files are shared. Review their contents before sharing because website payloads may contain sensitive information.</p>
+
+    <h2>Security and limited use</h2>
+    <p>Local storage reduces external exposure but does not guarantee confidentiality from someone with access to your device or browser profile. Do not treat the inspector as a secure vault.</p>
+    <p>DataLayer Monitor's use of information obtained through browser permissions complies with the Chrome Web Store User Data Policy, including its Limited Use requirements. Data handling is limited to the analytics inspection and debugging features described here.</p>
+
+    <h2>Changes and contact</h2>
+    <p>This policy may be updated when extension functionality or data practices change. The effective date above identifies the latest revision.</p>
+    <p>For privacy questions, contact the developer through the public GitHub profile: <a href="https://github.com/K4leds">Khaled Saif (@K4leds)</a>. Information you choose to submit through GitHub is handled by GitHub and may be public; do not post sensitive captured records.</p>
+  </main>
+</body>
+</html>
